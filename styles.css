@@ -75,8 +75,8 @@ nav ul li a:hover {
 }
 
 .profile-photo {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     margin-bottom: 1.5rem;
     border: 3px solid #00bfff;
     box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
@@ -263,8 +263,8 @@ h2 {
     }
 
     .profile-photo {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
     }
 
     h1 {
@@ -312,8 +312,8 @@ h2 {
     }
 
     .profile-photo {
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
     }
 
     h1 {
