@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Prathamesh Patil - Futuristic Frontier</title> <!-- Changed title to something futuristic -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon-32x32.png"> <!-- Added favicon -->
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section with Hyperspace Particle Effect -->
+    <section id="hero">
+        <div id="threejs-canvas"></div>
+        <div class="hero-content">
+            <img src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/397100/397143.jpg" alt="Your Photo" class="profile-photo">
+            <h1>Hello, I'm Prathamesh</h1>
+            <p>Web Explorer | Hyperspace Innovator | Code Voyager</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="animate-on-scroll">
+        <h2>About Me</h2>
+        <p>I craft sleek, futuristic web experiences that feel like traveling through hyperspace, blending simplicity with cutting-edge technology.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="animate-on-scroll">
+        <h2>My Projects</h2>
+        <div class="projects-grid" id="projectsGrid">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>Interactive 3D web application</p>
+            </div>
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>Animated portfolio with WebGL</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="animate-on-scroll">
+        <h2>My Blog</h2>
+        <div class="blog-grid" id="blogGrid">
+            <div class="blog-card">
+                <h3>Blog Post 1</h3>
+                <p>Exploring 3D animations in web development...</p>
+            </div>
+            <div class="blog-card">
+                <h3>Blog Post 2</h3>
+                <p>How to integrate Three.js in portfolios...</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

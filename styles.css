@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0a0a1a;
+    color: #e0ebeb;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 10, 26, 0.9);
+    padding: 1rem 1rem;
+    box-shadow: 0 2px 5px rgba(0, 191, 255, 0.2);
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center; /* Center on mobile */
+    list-style: none;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+nav ul li {
+    margin: 0.5rem 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0ebeb;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bfff;
+}
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 1rem; /* Add padding for mobile */
+}
+
+#threejs-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 90%; /* Prevent overflow on small screens */
+    animation: fadeIn 1.5s ease-in;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 1.5rem;
+    border: 3px solid #00bfff;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.3);
+    transition: transform 0.5s ease;
+    object-fit: cover; /* Ensure photo fits square without distortion */
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 3rem;
+    color: #e0ebeb;
+    text-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #b3c7c7;
+    margin-bottom: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 3rem 1rem; /* Reduced padding for mobile */
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #00bfff;
+    text-shadow: 0 0 5px rgba(0, 191, 255, 0.3);
+}
+
+/* About Section */
+#about {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    max-width: 90%; /* Ensure it fits on mobile */
+    margin: 0 auto;
+}
+
+/* Projects Section */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for mobile */
+    gap: 1.5rem;
+    padding: 0 0.5rem; /* Add padding for mobile */
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 150px; /* Reduced for mobile */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+}
+
+/* Blog Section */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjusted for mobile */
+    gap: 1.5rem;
+    padding: 0 0.5rem; /* Add padding for mobile */
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card p {
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        padding: 0.5rem 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0.3rem 0.8rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    #hero {
+        padding: 0 0.5rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 2rem 0.5rem;
+    }
+
+    .project-card img {
+        height: 120px;
+    }
+
+    .project-card h3, .project-card p, .blog-card h3, .blog-card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Stack navigation on very small screens */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.3rem 0;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-card img {
+        height: 100px;
+    }
+
+    .project-card, .blog-card {
+        padding: 0.8rem;
+    }
+}
